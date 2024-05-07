@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Formulário de Registro</h2>
+
+<form action="/submit.html">
+  <label for="fname">Nome:</label><br>
+  <input type="text" id="fname" name="fname" pattern="^[A-Za-z]{1,100}$" required><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required><br>
+  <label for="phone">Telefone com DDD:</label><br>
+  <input type="text" id="phone" name="phone" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script src="main.js"></script>
+
+</body>
+</html>
