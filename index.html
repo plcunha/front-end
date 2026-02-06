@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calcular Datas</title>
+    <title>Calculadora de Datas</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: system-ui, sans-serif; background: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 2rem; }
+      .container { background: #fff; border-radius: 8px; padding: 2rem; max-width: 420px; width: 100%; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+      h2 { margin-bottom: 1.2rem; color: #333; }
+      h3 { margin-top: 1.5rem; margin-bottom: .8rem; color: #555; font-size: .95rem; }
+      label { display: block; margin-top: .6rem; font-size: .85rem; color: #555; }
+      input { width: 100%; padding: .5rem; margin-top: .2rem; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; }
+      button { margin-top: 1rem; padding: .6rem 1.2rem; border: none; border-radius: 4px; background: #4a90d9; color: #fff; cursor: pointer; font-size: .9rem; }
+      button:hover { background: #3a7bc8; }
+      #result, #addResult { margin-top: 1rem; padding: .8rem; background: #f0f7ff; border-radius: 4px; font-size: .9rem; line-height: 1.6; }
+      #result:empty, #addResult:empty { display: none; }
+    </style>
   </head>
   <body>
-    <h2>Calculadora de Datas</h2>
-    <form id="dateForm">
-      <label for="date1">Primeira Data:</label>
-      <input type="date" id="date1" required />
+    <div class="container">
+      <h2>📅 Calculadora de Datas</h2>
 
-      <label for="date2">Segunda Data:</label>
-      <input type="date" id="date2" required />
+      <h3>Diferença entre datas</h3>
+      <form id="dateForm">
+        <label for="date1">Primeira Data:</label>
+        <input type="date" id="date1" required />
 
-      <button type="button" id="calculateButton">Calcular</button>
-    </form>
+        <label for="date2">Segunda Data:</label>
+        <input type="date" id="date2" required />
 
-    <div id="result"></div>
+        <button type="button" id="calculateButton">Calcular Diferença</button>
+      </form>
+      <div id="result"></div>
 
+      <h3>Adicionar dias a uma data</h3>
+      <form id="addDaysForm">
+        <label for="baseDate">Data base:</label>
+        <input type="date" id="baseDate" required />
+
+        <label for="daysToAdd">Dias a adicionar:</label>
+        <input type="number" id="daysToAdd" min="0" value="0" required />
+
+        <button type="button" id="addDaysButton">Adicionar Dias</button>
+      </form>
+      <div id="addResult"></div>
+    </div>
+
+    <script src="funcao.js"></script>
     <script src="main.js"></script>
-    <script src="functions.js"></script>
   </body>
 </html>

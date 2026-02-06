@@ -1,9 +1,36 @@
-# front-end
- Datas em JavaScript
- Este código usa de moment.js para funcionar, ele define três funções principais: adicionarDias, que adiciona um número específico de dias a uma data; diferencaEntreDatas, que calcula a 
- diferença em dias entre duas datas; e 
- formatarData, que formata uma data de acordo com uma string de formato fornecida.
- original usando a função diferencaEntreDatas, e formata a data original no formato ‘DD/MM/YYYY’ usando a função formatarData. As datas formatadas e a diferença são armazenadas em variáveis 
- para uso posterior.
+# 📅 Calculadora de Datas
 
- Trabalho realizado durante a aula de Front-End.
+Calculadora de datas em JavaScript puro — sem dependências externas.
+
+## Funcionalidades
+
+- **Diferença entre datas** — calcula o intervalo em dias entre duas datas
+- **Adicionar dias** — adiciona um número de dias a uma data base
+- **Data mais recente** — identifica a maior entre duas datas
+- **Formatação** — exibe datas no formato `DD/MM/AAAA`
+
+## Como usar
+
+Abra o arquivo `index.html` no navegador.
+
+## Estrutura
+
+| Arquivo | Descrição |
+|---------|-----------|
+| `index.html` | Interface da calculadora |
+| `funcao.js` | Funções utilitárias de data |
+| `main.js` | Lógica de interação com o DOM |
+
+## Funções disponíveis (`funcao.js`)
+
+| Função | Descrição |
+|--------|-----------|
+| `findMaxDate(d1, d2)` | Retorna a data mais recente |
+| `calculateDateInterval(d1, d2)` | Diferença em dias entre duas datas |
+| `addDaysToDate(date, days)` | Adiciona dias a uma data |
+| `formatDate(date)` | Formata data em `DD/MM/AAAA` |
+| `getCurrentDate()` | Retorna data/hora atual |
+
+---
+
+Trabalho realizado durante a aula de Front-End.
