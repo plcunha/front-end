@@ -10,6 +10,14 @@ const calculateDateInterval = (date1, date2) => {
   return diffDays;
 };
 
+const addDaysToDate = (date, days) => {
+  const result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+};
+
+const formatDate = (date) => date.toLocaleDateString("pt-BR");
+
 const getCurrentDate = () => {
   const currentDate = new Date();
   return currentDate.toLocaleString();
